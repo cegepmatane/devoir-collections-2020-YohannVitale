@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import modele.Collection;
 import modele.Oeuvre;
 
@@ -32,24 +33,25 @@ public class VueCollection extends Vue {
 
 	public void afficherCollection(modele.Collection collection)
 	{
-		TextArea affichageDescription = (TextArea)lookup("#collection-description");
+		/*TextArea affichageDescription = (TextArea)lookup("#collection-description");
 		affichageDescription.setText(collection.getDescription());
 
 		Label affichageTitre = (Label)lookup("#titre-page");
-		affichageTitre.setText("COLLECTION " + collection.getNom());
+		affichageTitre.setText("COLLECTION " + collection.getNom());*/
 	}
 
 	public void afficherCollections(List<Collection> collections)
 	{
 		Logger.logMsg(Logger.INFO, "VueCollection.afficherCollections()");
-		AnchorPane vueOeuvres = (AnchorPane) lookup("#fenetre");
-		vueOeuvres.getChildren().clear();
+		VBox vueOeuvres = (VBox)lookup("#affichageCollection");
+		//vueOeuvres.getChildren().clear();
+
 
 		for(Collection oeuvre:collections)
 		{
 			Logger.logMsg(Logger.INFO, "oeuvre " + oeuvre.getNom());
 			HBox vueOeuvre = new HBox();
-			vueOeuvre.getStyleClass().add("collection.css");
+			vueOeuvre.getStyleClass().add("oeuvre");
 			vueOeuvre.getChildren().add(new Label(oeuvre.getNom()));
 			vueOeuvres.getChildren().add(vueOeuvre);
 

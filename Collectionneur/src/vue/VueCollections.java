@@ -3,7 +3,7 @@ import java.util.List;
 
 import com.sun.media.jfxmedia.logging.Logger;
 
-import controleur.ControleurCollections;
+import controleur.ControleurCollectionneur;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -14,14 +14,14 @@ import javafx.scene.layout.Pane;
 
 public class VueCollections extends Vue {
 
-	protected ControleurCollections controleur;
+	protected ControleurCollectionneur controleur;
 	protected static VueCollections instance = null;
 	public static VueCollections getInstance() {if(null==instance)instance = new VueCollections();return VueCollections.instance;};
 
 	private VueCollections()
 	{
 		super("collections.fxml");
-		super.controleur = this.controleur = new ControleurCollections();
+		super.controleur = this.controleur = new ControleurCollectionneur();
 		Logger.logMsg(Logger.INFO, "new VueCollections()");
 	}
 
