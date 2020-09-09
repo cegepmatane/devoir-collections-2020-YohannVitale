@@ -11,9 +11,10 @@ import java.util.List;
 import modele.Collection;
 import modele.Oeuvre;
 
-public class OeuvreDAO {
+public class OeuvreDAO
+{
 
-	public static List<Collection> listerOeuvreParCollections()
+	/*public static List<Collection> listerOeuvreParCollections()
 	{
 		Connection connection = BaseDeDonnees.getInstance().getConnection();
 
@@ -21,7 +22,7 @@ public class OeuvreDAO {
 		Statement requeteListeCollection;
 		try {
 			requeteListeCollection = connection.createStatement();
-			ResultSet curseurListeCollections = requeteListeCollection.executeQuery("SELECT * from Collection");
+			ResultSet curseurListeCollections = requeteListeCollection.executeQuery("SELECT * FROM oeuvre WHERE id_collection = ?");
 			while(curseurListeCollections.next())
 			{
 				int id = curseurListeCollections.getInt("id");
@@ -36,7 +37,7 @@ public class OeuvreDAO {
 		}
 
 		return listeCollection;
-	}
+	}*/
 
 	public List<Oeuvre> listerOeuvreParCollections(int idCollection)
 	{

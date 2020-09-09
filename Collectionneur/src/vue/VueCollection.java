@@ -40,14 +40,14 @@ public class VueCollection extends Vue {
 		affichageTitre.setText("COLLECTION " + collection.getNom());*/
 	}
 
-	public void afficherCollections(List<Collection> collections)
+	public void afficherCollections(List<Oeuvre> list)
 	{
 		Logger.logMsg(Logger.INFO, "VueCollection.afficherCollections()");
 		VBox vueOeuvres = (VBox)lookup("#affichageCollection");
 		//vueOeuvres.getChildren().clear();
 
 
-		for(Collection oeuvre:collections)
+		for(Oeuvre oeuvre:list)
 		{
 			Logger.logMsg(Logger.INFO, "oeuvre " + oeuvre.getNom());
 			HBox vueOeuvre = new HBox();
