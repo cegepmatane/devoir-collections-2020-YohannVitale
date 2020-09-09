@@ -43,12 +43,12 @@ public class OeuvreDAO
 	{
 		Connection connection = BaseDeDonnees.getInstance().getConnection();
 
-		List<Oeuvre> oeuvres = new ArrayList<Oeuvre>();
+		List<Oeuvre> listeOeuvres = new ArrayList<Oeuvre>();
 
 		try {
-			//PreparedStatement requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id_collection = ?");
-			PreparedStatement requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id_collection = 1");
-			//requete.setInt(1, idCollection);
+			PreparedStatement requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id_collection = ?");
+			//PreparedStatement requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id_collection = 1");
+			requete.setInt(1, idCollection);
 			ResultSet curseur = requete.executeQuery();
 			while(curseur.next())
 			{
@@ -56,18 +56,19 @@ public class OeuvreDAO
 				String nom = curseur.getString("nom");
 				String description = curseur.getString("description");
 				System.out.println("je suis dans List<Oeuvre> while de OeuvreDAO");
-				System.out.println(id);
+				System.out.println(id + nom);
 				Oeuvre oeuvre = new Oeuvre();
 				oeuvre.setId(id);
 				oeuvre.setNom(nom);
 				oeuvre.setDescription(description);
-				oeuvre.add(oeuvre);
+				listeOeuvres.add(oeuvre);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
-		return oeuvres;
+		System.out.println("La liste des oeuvres : " + listeOeuvres);
+		return listeOeuvres;
 	}
 
 }
