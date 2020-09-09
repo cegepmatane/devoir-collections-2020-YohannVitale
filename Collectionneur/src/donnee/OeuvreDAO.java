@@ -46,15 +46,17 @@ public class OeuvreDAO
 		List<Oeuvre> oeuvres = new ArrayList<Oeuvre>();
 
 		try {
-			PreparedStatement requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id_collection = ?");
-			requete.setInt(1, idCollection);
+			//PreparedStatement requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id_collection = ?");
+			PreparedStatement requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id_collection = 1");
+			//requete.setInt(1, idCollection);
 			ResultSet curseur = requete.executeQuery();
 			while(curseur.next())
 			{
 				int id = curseur.getInt("id");
 				String nom = curseur.getString("nom");
 				String description = curseur.getString("description");
-
+				System.out.println("je suis dans List<Oeuvre> while de OeuvreDAO");
+				System.out.println(id);
 				Oeuvre oeuvre = new Oeuvre();
 				oeuvre.setId(id);
 				oeuvre.setNom(nom);

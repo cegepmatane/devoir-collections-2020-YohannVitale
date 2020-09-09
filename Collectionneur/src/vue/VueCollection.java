@@ -43,6 +43,8 @@ public class VueCollection extends Vue {
 	public void afficherOeuvre(List<Oeuvre> list)
 	{
 		Logger.logMsg(Logger.INFO, "VueCollection.afficherOeuvre()");
+		System.out.println("vueCollection.afficherOeuvre()");
+		System.out.println(list);
 		VBox vueOeuvres = (VBox)lookup("#affichageCollection");
 		//vueOeuvres.getChildren().clear();
 
@@ -56,6 +58,8 @@ public class VueCollection extends Vue {
 			vueOeuvres.getChildren().add(vueOeuvre);
 
 		}
+
+		System.out.println("apres la boucle for Oeuvre oeuvre:list");
 
 	}
 }
