@@ -40,9 +40,9 @@ public class VueCollection extends Vue {
 		affichageTitre.setText("COLLECTION " + collection.getNom());*/
 	}
 
-	public void afficherCollections(List<Oeuvre> list)
+	public void afficherOeuvre(List<Oeuvre> list)
 	{
-		Logger.logMsg(Logger.INFO, "VueCollection.afficherCollections()");
+		Logger.logMsg(Logger.INFO, "VueCollection.afficherOeuvre()");
 		VBox vueOeuvres = (VBox)lookup("#affichageCollection");
 		//vueOeuvres.getChildren().clear();
 

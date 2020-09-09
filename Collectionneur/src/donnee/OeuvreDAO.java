@@ -39,7 +39,7 @@ public class OeuvreDAO
 		return listeCollection;
 	}*/
 
-	public List<Oeuvre> listerOeuvreParCollections(int idCollection)
+	public static List<Oeuvre> listerOeuvreParCollections(int idCollection)
 	{
 		Connection connection = BaseDeDonnees.getInstance().getConnection();
 
