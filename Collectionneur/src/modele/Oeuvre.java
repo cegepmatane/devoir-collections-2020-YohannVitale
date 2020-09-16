@@ -41,12 +41,21 @@ public class Oeuvre {
 	}
 
 
-	public void add(Oeuvre oeuvre)
+	/*public void add(Oeuvre oeuvre)
 	{
 		// TODO Auto-generated method stub
 		this.idCollection = idCollection;
+	}*/
+
+	public int getIdCollection()
+	{
+		return idCollection;
 	}
 
+	public void setIdCollection(int idCollection)
+	{
+		this.idCollection = idCollection;
+	}
 
 
 

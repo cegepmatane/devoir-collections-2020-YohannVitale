@@ -71,4 +71,22 @@ public class OeuvreDAO
 		return listeOeuvres;
 	}
 
+	public void ajouterOeuvre(Oeuvre oeuvre)
+	{
+		Connection connection = BaseDeDonnees.getInstance().getConnection();
+		try
+		{
+			PreparedStatement requete = connection.prepareStatement("INSERT into oeuvre(nom, description) VALUES(?, ?)");
+			requete.setString(1, oeuvre.getNom());
+			requete.setString(2, oeuvre.getDescription());
+			requete.execute();
+		}
+		catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
 }
