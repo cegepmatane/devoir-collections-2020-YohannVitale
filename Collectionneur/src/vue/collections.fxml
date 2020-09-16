@@ -52,7 +52,7 @@
                      <children>
                         <FlowPane prefWidth="1085.0">
                            <children>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: Gray;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>
@@ -77,14 +77,14 @@
                                           <Image url="@decoration/cadres/coin-bas-droit.png" />
                                        </image>
                                     </ImageView>
-                                    <Button id="categorie-1" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes">
+                                    <Button id="categorie-1" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes" textFill="RED">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font name="Algerian" size="33.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: Green;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>
@@ -109,14 +109,14 @@
                                           <Image url="@decoration/cadres/coin-bas-droit.png" />
                                        </image>
                                     </ImageView>
-                                    <Button id="categorie-2" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes">
+                                    <Button id="categorie-2" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes" textFill="WHITE">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font name="Agency FB" size="36.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: Yellow;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>
@@ -143,12 +143,12 @@
                                     </ImageView>
                                     <Button id="categorie-3" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font name="Arial Rounded MT Bold" size="30.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: blue;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>
@@ -173,14 +173,14 @@
                                           <Image url="@decoration/cadres/coin-bas-droit.png" />
                                        </image>
                                     </ImageView>
-                                    <Button id="categorie-4" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes">
+                                    <Button id="categorie-4" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes" textFill="#cd5b5b">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font name="Blackadder ITC" size="36.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: yellow;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>
@@ -205,14 +205,14 @@
                                           <Image url="@decoration/cadres/coin-bas-droit.png" />
                                        </image>
                                     </ImageView>
-                                    <Button id="categorie-5" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes">
+                                    <Button id="categorie-5" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes" textFill="#010908">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font name="Book Antiqua Bold" size="36.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: darkblue;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>
@@ -237,14 +237,14 @@
                                           <Image url="@decoration/cadres/coin-bas-droit.png" />
                                        </image>
                                     </ImageView>
-                                    <Button id="categorie-6" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes">
+                                    <Button id="categorie-6" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes" textFill="#1fff01">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font name="Bookshelf Symbol 7" size="36.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: darkgray;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>
@@ -269,14 +269,14 @@
                                           <Image url="@decoration/cadres/coin-bas-droit.png" />
                                        </image>
                                     </ImageView>
-                                    <Button id="categorie-7" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes">
+                                    <Button id="categorie-7" alignment="CENTER" layoutX="28.0" layoutY="55.0" prefHeight="48.0" prefWidth="181.0" text="Lampes" textFill="#ff00d0">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font name="Bodoni MT Black" size="30.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </Pane>
-                              <Pane prefHeight="160.0" prefWidth="245.0" styleClass="collection">
+                              <Pane prefHeight="160.0" prefWidth="245.0" style="-fx-background-color: pink;" styleClass="collection">
                                  <FlowPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </FlowPane.margin>

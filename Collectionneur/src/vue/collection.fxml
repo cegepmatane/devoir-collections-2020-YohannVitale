@@ -53,7 +53,7 @@
                   <VBox id="affichageCollection" fx:id="affichageCollection" layoutY="-5.0" prefHeight="487.0" prefWidth="1084.0" style="-fx-background-color: Red;" />
                      </children>
                   </AnchorPane>
-            <Button id="actionAjouterOeuvre" fx:id="actionAjouterOeuvre" layoutX="590.0" layoutY="565.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="206.0" text="Ajouter" />
+            <Button id="actionAjouterOeuvre" fx:id="actionAjouterOeuvre" layoutX="590.0" layoutY="565.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="206.0" style="-fx-background-radius: 30;" text="Ajouter" />
          </children>
       </AnchorPane>
       <Pane id="entete" layoutX="-3.0" prefHeight="92.0" prefWidth="1171.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">

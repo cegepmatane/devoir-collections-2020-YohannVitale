@@ -81,7 +81,7 @@ public class VueCollection extends Vue {
 		for(Oeuvre oeuvre:list)
 		{
 			action = new Button("Éditer");
-			//action.setId(collection.getId() + "");
+			action.setId(oeuvre.getId() + "");
 			action.setOnAction(new EventHandler<ActionEvent>()
 			{
 				public void handle(ActionEvent e)
@@ -89,7 +89,7 @@ public class VueCollection extends Vue {
 					Button source = (Button)e.getSource();
 					System.out.println(" id de l'oeuvre : " + source.getId());
 					Logger.logMsg(Logger.INFO, "Clic sur le oeuvre " + source.getId());
-					//controleur.notifierClicEditerOeuvre(Integer.parseInt(source.getId()));
+					controleur.notifierClicEditerOeuvre(Integer.parseInt(source.getId()));
 				}
 			});
 

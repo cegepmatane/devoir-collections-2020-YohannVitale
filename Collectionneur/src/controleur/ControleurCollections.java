@@ -20,7 +20,7 @@ public class ControleurCollections extends Controleur{
 	{
 		CollectionDAO collectionDAO = new CollectionDAO();
 		VueCollection.getInstance().afficherCollection(collectionDAO.detaillerCollection(numero));
-		VueCollection.getInstance().afficherCollections(OeuvreDAO.listerOeuvreParCollections());
+		VueCollection.getInstance().afficherOeuvre(OeuvreDAO.listerOeuvreParCollections(numero));
 		Navigateur.getInstance().afficherVue(VueCollection.getInstance());
 	}
 

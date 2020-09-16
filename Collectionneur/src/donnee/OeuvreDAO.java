@@ -39,6 +39,31 @@ public class OeuvreDAO
 		return listeCollection;
 	}*/
 
+	public Oeuvre detaillerOeuvre(int id)
+	{
+		Connection connection = BaseDeDonnees.getInstance().getConnection();
+		Oeuvre oeuvre = new Oeuvre();
+		PreparedStatement requete;
+		try {
+			requete = connection.prepareStatement("SELECT * FROM oeuvre WHERE id = ?");
+			requete.setInt(1, id);
+			ResultSet curseur = requete.executeQuery();
+			curseur.next();
+			String nom = curseur.getString("nom");
+			String description = curseur.getString("description");
+			oeuvre.setNom(nom);
+			oeuvre.setDescription(description);
+			oeuvre.setId(id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+
+		return oeuvre;
+	}
+
 	public static List<Oeuvre> listerOeuvreParCollections(int idCollection)
 	{
 		Connection connection = BaseDeDonnees.getInstance().getConnection();
@@ -87,6 +112,25 @@ public class OeuvreDAO
 			e.printStackTrace();
 		}
 
+	}
+
+	public void editerOeuvre(Oeuvre oeuvre)
+	{
+		// TODO Auto-generated method stub
+		Connection connection = BaseDeDonnees.getInstance().getConnection();
+		try
+		{
+			PreparedStatement requete = connection.prepareStatement("UPDATE oeuvre SET nom = ?, description = ? WHERE id = ?");
+			requete.setString(1, oeuvre.getNom());
+			requete.setString(2, oeuvre.getDescription());
+			requete.setInt(3, oeuvre.getId());
+			requete.execute();
+		}
+		catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

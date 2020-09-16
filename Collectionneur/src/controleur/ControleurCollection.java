@@ -11,6 +11,7 @@ import modele.Oeuvre;
 import vue.Navigateur;
 import vue.VueAjouterOeuvre;
 import vue.VueCollection;
+import vue.VueEditerOeuvre;
 
 public class ControleurCollection extends Controleur
 {
@@ -56,9 +57,33 @@ public class ControleurCollection extends Controleur
 		Navigateur.getInstance().afficherVue(VueCollection.getInstance());
 	}
 
-	public void notifierClicEditerOeuvre(int ind)
+	protected Oeuvre oeuvre;
+
+	public void notifierClicEditerOeuvre(int id)
 	{
-		Logger.logMsg(Logger.INFO, "ControleurCollectionClicEditerOeuvre");
+
+		OeuvreDAO oeuvreDAO = new OeuvreDAO();
+		this.oeuvre = oeuvreDAO.detaillerOeuvre(id);
+
+		Logger.logMsg(Logger.INFO, "ControleurCollectionClicEditerOeuvre(" + id + ")");
+		VueEditerOeuvre.getInstance().afficherOeuvre(oeuvre);
+		Navigateur.getInstance().afficherVue(VueEditerOeuvre.getInstance());
+
+
+	}
+
+	public void notifierClicEnregistrerEditerOeuvre()
+	{
+		// TODO Auto-generated method stub
+
+		Oeuvre oeuvre = VueEditerOeuvre.getInstance().lireOeuvre();
+		oeuvre.setIdCollection(collection.getId());
+		oeuvre.setId(this.oeuvre.getId());
+		OeuvreDAO oeuvreDAO = new OeuvreDAO();
+		oeuvreDAO.editerOeuvre(oeuvre);
+		this.oeuvres = oeuvreDAO.listerOeuvreParCollections(collection.getId()); //TODO
+		VueCollection.getInstance().afficherOeuvre(oeuvres);
+		Navigateur.getInstance().afficherVue(VueCollection.getInstance());
 	}
 
 }
